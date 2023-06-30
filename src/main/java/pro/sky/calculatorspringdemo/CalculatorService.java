@@ -6,5 +6,5 @@ public interface CalculatorService {
     int getPlus(int x, int y);
     int getMinus(int x, int y);
     int getMultiply(int x, int y);
-    double getDivide(int x, int y);
+    double  getDivide(int x, int y);
 }
