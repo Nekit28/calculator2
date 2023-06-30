@@ -33,6 +33,6 @@ public class CalculatorController {
     }
     @GetMapping(path = "/divide")
     public String getDivide(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
-        return num2 != 0 ? num1 + " / " + num2 + " = " + calculatorService.getPlus(num1, num2) : "Ошибка: делить на 0 нельзя! ";
+        return num2 != 0 ? num1 + " / " + num2 + " = " + calculatorService.getPlus(num1, num2) : "Ошибка: делить на 0 нельзя!";
     }
 }
