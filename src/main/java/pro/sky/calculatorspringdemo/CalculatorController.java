@@ -15,24 +15,24 @@ public class CalculatorController {
     }
 
     @GetMapping()
-    public String hello() {
-        return calculatorService.hello();
+    public String greetings() {
+        return calculatorService.greetings();
     }
 
-    @GetMapping(path = "/plus")
-    public String getPlus(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
-        return num1 + " + " + num2 + " = " + calculatorService.getPlus(num1, num2);
+    @GetMapping( "/plus")
+    public String plus(@RequestParam int num1, @RequestParam int num2) {
+        return calculatorService.plus(num1, num2);
     }
-    @GetMapping(path = "/minus")
-    public String getMinus(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
-        return num1 + " - " + num2 + " = " + calculatorService.getMinus(num1, num2);
+    @GetMapping( "/minus")
+    public String minus(@RequestParam int num1, @RequestParam int num2) {
+        return calculatorService.minus(num1, num2);
     }
-    @GetMapping(path = "/multiply")
-    public String getMultiply(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
-        return num1 + " * " + num2 + " = " + calculatorService.getMultiply(num1, num2);
+    @GetMapping( "/multiply")
+    public String multiply(@RequestParam int num1, @RequestParam int num2) {
+        return calculatorService.multiply(num1, num2);
     }
-    @GetMapping(path = "/divide")
-    public String getDivide(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
-        return num2 != 0 ? num1 + " / " + num2 + " = " + calculatorService.getPlus(num1, num2) : "Ошибка: делить на 0 нельзя! ";
+    @GetMapping( "/divide")
+    public String divide(@RequestParam int num1, @RequestParam int num2) {
+        return calculatorService.divide(num1, num2);
     }
 }
